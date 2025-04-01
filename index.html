@@ -11,7 +11,9 @@
     <meta name="author" content="Zero&Zeskar" />
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
-    <!-- <script defer src="main.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script defer src="main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -27,7 +29,48 @@
             </ul>
         </nav>
     </header>
-    <main id="content"></main>
+    <main id="content">
+        <div id="sidePanel" class="container">
+            <div class="sidebar">
+                <div class="flight-header">
+                    <h2>Flight Information</h2>
+                </div>
+                <div class="flight-info">
+                    <div class="flight-row">
+                        <span class="label">Flight:</span>
+                        <span class="value">AB123</span>
+                    </div>
+                    <div class="flight-row">
+                        <span class="label">Airline:</span>
+                        <span class="value">Example Airlines</span>
+                    </div>
+                    <div class="flight-row">
+                        <span class="label">Departure:</span>
+                        <span class="value">JFK (New York)</span>
+                    </div>
+                    <div class="flight-row">
+                        <span class="label">Arrival:</span>
+                        <span class="value">LHR (London)</span>
+                    </div>
+                    <div class="flight-row">
+                        <span class="label">Status:</span>
+                        <span class="value status">En Route</span>
+                    </div>
+                    <div class="flight-row">
+                        <span class="label">Altitude:</span>
+                        <span class="value">35,000 ft</span>
+                    </div>
+                    <div class="flight-row">
+                        <span class="label">Speed:</span>
+                        <span class="value">540 knots</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </main>
     <footer class="footer">
         <p>&copy; 2025 Air Traffic Tracker. All rights reserved.</p>
     </footer>
