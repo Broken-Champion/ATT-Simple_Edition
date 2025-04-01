@@ -1,0 +1,109 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Clean and professional font */
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6; /* Improve text spacing */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center;
+    background-color: #333; /* Dark background for a professional look */
+    color: white;
+    height: 80px; /* Fixed height for consistency */
+    padding: 0 20px; /* Add padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky; /* Keep header visible on scroll */
+    top: 0;
+    z-index: 1000; /* Ensure header stays on top */
+}
+
+#logo img {
+    height: 100px; /* Match the font size of the list items */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Add interactivity */
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listItems {
+    display: flex;
+    align-items: center;
+}
+
+.listItems li {
+    margin: 0 15px; /* Add spacing between list items */
+    padding: 0;
+    border: none; /* Remove borders for a cleaner look */
+    color: white;
+    font-size: 16px; /* Adjust font size for readability */
+    font-weight: bold;
+    text-transform: uppercase; /* Make text uppercase for a professional style */
+    cursor: pointer; /* Add pointer cursor for interactivity */
+}
+
+.listItems li:hover {
+    color: #ffcc00; /* Highlight on hover */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333; /* Match header background for consistency */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Add padding for spacing */
+    font-size: 14px; /* Smaller font for footer */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Ensure footer spans the full width */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.footer a {
+    color: #ffcc00; /* Highlight links in footer */
+    text-decoration: none; /* Remove underline for cleaner look */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Add underline on hover for clarity */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack header elements on smaller screens */
+        height: auto;
+        padding: 10px;
+    }
+
+    #logo img {
+        height: 20px; /* Match the smaller font size for list items */
+        width: auto; /* Maintain aspect ratio */
+    }
+
+    ul {
+        justify-content: center; /* Center navigation items */
+    }
+
+    .listItems li {
+        margin: 0 10px; /* Reduce spacing for smaller screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+
+    .footer {
+        font-size: 12px; /* Smaller font for smaller screens */
+    }
+}
