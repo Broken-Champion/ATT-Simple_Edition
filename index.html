@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>ATT</title>
-    <meta name="description" content="Air Traffic Tracker Website, Track any flight anywhere in anytime" />
-    <meta name="author" content="Zero&Zeskar" />
-    <meta name="theme-color" content="#ffffff">
+    <title>ATT - Air Traffic Tracker</title>
+    <meta name="description" content="Air Traffic Tracker Website, Track any flight anywhere in anytime">
+    <meta name="author" content="Zero&Zeskar">
+    <meta name="theme-color" content="#1a1a2e">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script defer src="main.js"></script>
 </head>
@@ -19,60 +20,105 @@
     <header class="header">
         <div id="logo">
             <img src="../logo.png" alt="ATT Logo">
+            <h1>Air Traffic Tracker</h1>
         </div>
         <nav>
             <ul class="listItems">
-                <li>Home</li>
-                <li>Airlines</li>
-                <li>Airplanes</li>
-                <li>About</li>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-plane"></i> Airlines</a></li>
+                <li><a href="#"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
     <main id="content">
-        <div id="sidePanel" class="container">
-            <div class="sidebar">
-                <div class="flight-header">
-                    <h2>Flight Information</h2>
-                </div>
-                <div class="flight-info">
-                    <div class="flight-row">
-                        <span class="label">Flight:</span>
-                        <span class="value">AB123</span>
+        <div id="search-container">
+            <div class="search-wrapper">
+                <input type="text" id="flightSearch" placeholder="Enter flight number (e.g., AB123)...">
+                <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+                <div class="search-suggestions"></div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div id="sidePanel" class="container">
+                <div class="sidebar">
+                    <div class="flight-header">
+                        <h2><i class="fas fa-plane"></i> Flight Information</h2>
                     </div>
-                    <div class="flight-row">
-                        <span class="label">Airline:</span>
-                        <span class="value">Example Airlines</span>
-                    </div>
-                    <div class="flight-row">
-                        <span class="label">Departure:</span>
-                        <span class="value">JFK (New York)</span>
-                    </div>
-                    <div class="flight-row">
-                        <span class="label">Arrival:</span>
-                        <span class="value">LHR (London)</span>
-                    </div>
-                    <div class="flight-row">
-                        <span class="label">Status:</span>
-                        <span class="value status">En Route</span>
-                    </div>
-                    <div class="flight-row">
-                        <span class="label">Altitude:</span>
-                        <span class="value">35,000 ft</span>
-                    </div>
-                    <div class="flight-row">
-                        <span class="label">Speed:</span>
-                        <span class="value">540 knots</span>
+                    <div class="flight-info">
+                        <div class="flight-row">
+                            <span class="label">Flight:</span>
+                            <span class="value">AB123</span>
+                        </div>
+                        <div class="flight-row">
+                            <span class="label">Airline:</span>
+                            <span class="value">Example Airlines</span>
+                        </div>
+                        <div class="flight-row">
+                            <span class="label">Departure:</span>
+                            <span class="value">JFK (New York)</span>
+                        </div>
+                        <div class="flight-row">
+                            <span class="label">Arrival:</span>
+                            <span class="value">LHR (London)</span>
+                        </div>
+                        <div class="flight-row">
+                            <span class="label">Status:</span>
+                            <span class="value status">En Route</span>
+                        </div>
+                        <div class="flight-row">
+                            <span class="label">Altitude:</span>
+                            <span class="value">35,000 ft</span>
+                        </div>
+                        <div class="flight-row">
+                            <span class="label">Speed:</span>
+                            <span class="value">540 knots</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="map-container">
-            <div id="map"></div>
+            <div id="map-container">
+                <div id="map"></div>
+                <div class="map-controls">
+                    <button class="map-btn" id="zoom-in"><i class="fas fa-plus"></i></button>
+                    <button class="map-btn" id="zoom-out"><i class="fas fa-minus"></i></button>
+                    <button class="map-btn" id="locate-me"><i class="fas fa-location-arrow"></i></button>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
-        <p>&copy; 2025 Air Traffic Tracker. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ATT</h3>
+                <p>Track any flight anywhere in the world in real-time with our comprehensive air traffic monitoring system.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Airlines</a></li>
+                    <li><a href="#">Airplanes</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> contact@attracker.com</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Air Traffic Tracker. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
