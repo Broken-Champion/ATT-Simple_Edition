@@ -26,7 +26,7 @@
             <ul class="listItems">
                 <li><a href="index.html"><i class="fas fa-home"><button></button></i> Home</a></li>
                 <li><a href="#"><i class="fas fa-plane"></i> Airlines</a></li>
-                <li><a href="Airplanes.html"><i class="fas fa-plane-departure"><button></button></i> Airplanes</a></li>
+                <li><a href="#"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
                 <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -37,59 +37,38 @@
     <main id="content">
         <div id="search-container">
             <div class="search-wrapper">
-                <input type="text" id="flightSearch" placeholder="Enter Model number (e.g., 727)...">
-                <button id="searchButton"><i class="fas fa-search"></i> Search</button>
-                <div class="search-suggestions"></div>
+              <input type="text" id="flightSearch" placeholder="Search aircraft by name...">
+              <button id="searchButton"><i class="fas fa-search"></i> Search</button>
             </div>
-        </div>
+          
+            <div class="filters">
+              <label for="manufacturerFilter">Manufacturer:</label>
+              <select id="manufacturerFilter">
+                <option value="">All</option>
+                <option value="boeing">Boeing</option>
+                <option value="airbus">Airbus</option>
+                <option value="lockheed martin">Lockheed Martin</option>
+                <option value="northrop grumman">Northrop Grumman</option>
+                <option value="embraer">Embraer</option>
+                <!-- Add more or generate dynamically -->
+              </select>
+          
+              <label for="roleFilter">Role:</label>
+              <select id="roleFilter">
+                <option value="">All</option>
+                <option value="fighter aircraft">Fighter</option>
+                <option value="commercial airliner">Commercial</option>
+                <option value="military transport aircraft">Military Transport</option>
+                <option value="bomber">Bomber</option>
+                <!-- Add more or generate dynamically -->
+              </select>
+            </div>
+          
+            <div class="search-suggestions"></div>
+          </div>
+          
+        <section id="airplane-cards" class="card-container"></section>
         
-        <div class="main-content">
-            <div id="sidePanel" class="container">
-                <div class="sidebar">
-                    <div class="flight-header">
-                        <h2><i class="fas fa-plane"></i> Flight Information</h2>
-                    </div>
-                    <div class="flight-info">
-                        <div class="flight-row">
-                            <span class="label">Flight:</span>
-                            <span class="value">AB123</span>
-                        </div>
-                        <div class="flight-row">
-                            <span class="label">Airline:</span>
-                            <span class="value">Example Airlines</span>
-                        </div>
-                        <div class="flight-row">
-                            <span class="label">Departure:</span>
-                            <span class="value">JFK (New York)</span>
-                        </div>
-                        <div class="flight-row">
-                            <span class="label">Arrival:</span>
-                            <span class="value">LHR (London)</span>
-                        </div>
-                        <div class="flight-row">
-                            <span class="label">Status:</span>
-                            <span class="value status">En Route</span>
-                        </div>
-                        <div class="flight-row">
-                            <span class="label">Altitude:</span>
-                            <span class="value">35,000 ft</span>
-                        </div>
-                        <div class="flight-row">
-                            <span class="label">Speed:</span>
-                            <span class="value">540 knots</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="map-container">
-                <div id="map"></div>
-                <div class="map-controls">
-                    <button class="map-btn" id="zoom-in"><i class="fas fa-plus"></i></button>
-                    <button class="map-btn" id="zoom-out"><i class="fas fa-minus"></i></button>
-                    <button class="map-btn" id="locate-me"><i class="fas fa-location-arrow"></i></button>
-                </div>
-            </div>
-        </div>
     </main>
     <footer class="footer">
         <div class="footer-content">

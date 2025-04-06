@@ -324,6 +324,34 @@ body {
     background-color: #F44336;
 }
 
+/* Airplane Card styles */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .airplane-card {
+    background: black;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    color: white;
+  }
+  
+  .airplane-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .airplane-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+
 /* Footer Styles */
 .footer {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
