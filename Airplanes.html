@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script defer src="main.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -24,10 +24,10 @@
         </div>
         <nav>
             <ul class="listItems">
-                <li><a href="index.html"><i class="fas fa-home"><button></button></i> Home</a></li>
-                <li><a href="#"><i class="fas fa-plane"></i> Airlines</a></li>
-                <li><a href="#"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
-                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
+                <li><a href="Airplanes.html"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <i class="fas fa-bars"></i>
@@ -37,38 +37,34 @@
     <main id="content">
         <div id="search-container">
             <div class="search-wrapper">
-              <input type="text" id="flightSearch" placeholder="Search aircraft by name...">
-              <button id="searchButton"><i class="fas fa-search"></i> Search</button>
+                <input type="text" id="flightSearch" placeholder="Search aircraft by name...">
+                <button id="searchButton"><i class="fas fa-search"></i> Search</button>
             </div>
-          
+
             <div class="filters">
-              <label for="manufacturerFilter">Manufacturer:</label>
-              <select id="manufacturerFilter">
-                <option value="">All</option>
-                <option value="boeing">Boeing</option>
-                <option value="airbus">Airbus</option>
-                <option value="lockheed martin">Lockheed Martin</option>
-                <option value="northrop grumman">Northrop Grumman</option>
-                <option value="embraer">Embraer</option>
-                <!-- Add more or generate dynamically -->
-              </select>
-          
-              <label for="roleFilter">Role:</label>
-              <select id="roleFilter">
-                <option value="">All</option>
-                <option value="fighter aircraft">Fighter</option>
-                <option value="commercial airliner">Commercial</option>
-                <option value="military transport aircraft">Military Transport</option>
-                <option value="bomber">Bomber</option>
-                <!-- Add more or generate dynamically -->
-              </select>
+                <label for="manufacturerFilter">Manufacturer:</label>
+                <select id="manufacturerFilter">
+                    <option value="">All</option>
+                    <option value="boeing">Boeing</option>
+                    <option value="airbus">Airbus</option>
+                    <option value="lockheed martin">Lockheed Martin</option>
+                    <option value="northrop grumman">Northrop Grumman</option>
+                    <option value="embraer">Embraer</option>
+                </select>
+
+                <label for="roleFilter">Role:</label>
+                <select id="roleFilter">
+                    <option value="">All</option>
+                    <option value="fighter aircraft">Fighter</option>
+                    <option value="commercial airliner">Commercial</option>
+                    <option value="military transport aircraft">Military Transport</option>
+                    <option value="bomber">Bomber</option>
+                </select>
             </div>
-          
+
             <div class="search-suggestions"></div>
-          </div>
-          
+        </div>
         <section id="airplane-cards" class="card-container"></section>
-        
     </main>
     <footer class="footer">
         <div class="footer-content">
