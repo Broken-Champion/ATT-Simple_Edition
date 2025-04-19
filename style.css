@@ -99,7 +99,7 @@ body {
 }
 /* Search Bar Styles */
 #search-container {
-    /*background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));*/
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
     padding: 1.5rem 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -630,45 +630,3 @@ body {
 .listItems a {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
-
-.card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
-    width: 250px;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  .card-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .card-body {
-    text-align: left;
-  }
-  
-  .search-suggestions {
-    background: #fff;
-    border: 1px solid #ccc;
-    max-height: 150px;
-    overflow-y: auto;
-    position: absolute;
-    z-index: 10;
-    width: 300px;
-  }
-  
-  .suggestion {
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-  
-  .suggestion:hover {
-    background-color: #f0f0f0;
-  }
-  
