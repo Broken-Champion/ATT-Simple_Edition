@@ -382,3 +382,54 @@ window.addEventListener('scroll', () => {
     fetchData();
   }
 });
+
+
+
+/// ATC Code:
+
+const icaoInput = document.getElementById('icao-input');
+const searchBtn = document.getElementById('search-btn');
+const previewFrame = document.getElementById('liveatc-frame');
+const overlay = document.getElementById('preview-overlay');
+const launchButton = document.getElementById('launch-button');
+
+// Create a popup window reference
+let liveatcWindow = null;
+
+// Function to load the preview
+function loadLiveATCPreview(icao) {
+    // Hide overlay when frame loads
+    previewFrame.onload = () => overlay.classList.add('hidden');
+    
+    // Set the iframe source
+    previewFrame.src = `https://www.liveatc.net/search/?icao=${icao}`;
+    
+    // Also open in a new window
+    liveatcWindow = window.open(
+        `https://www.liveatc.net/search/?icao=${icao}`,
+        'LiveATC_Preview',
+        'width=800,height=600,top=100,left=100'
+    );
+}
+
+// Manual load button
+launchButton.addEventListener('click', () => {
+    loadLiveATCPreview(icaoInput.value.trim().toUpperCase());
+});
+
+// Search button
+searchBtn.addEventListener('click', () => {
+    const icao = icaoInput.value.trim().toUpperCase();
+    if (icao) {
+        loadLiveATCPreview(icao);
+    }
+});
+
+// Handle popup window closing
+setInterval(() => {
+    if (liveatcWindow && liveatcWindow.closed) {
+        overlay.classList.remove('hidden');
+        previewFrame.src = '';
+        liveatcWindow = null;
+    }
+}, 1000);
