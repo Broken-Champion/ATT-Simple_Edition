@@ -236,6 +236,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Airplane Cards information API call.
 
+// Airplane Cards information API call.
+
 let offset = 0; // Offset for pagination (start at 0)
 const limit = 50; // Initial number of results to load
 const maxResults = 1000000; // The maximum number of results you want to load in total
@@ -380,95 +382,3 @@ window.addEventListener('scroll', () => {
     fetchData();
   }
 });
-
-const searchInput = document.getElementById("flightSearch");
-const searchButton = document.getElementById("searchButton");
-const manufacturerFilter = document.getElementById("manufacturerFilter");
-const roleFilter = document.getElementById("roleFilter");
-const suggestionsContainer = document.querySelector(".search-suggestions");
-const airplaneCardsContainer = document.getElementById("airplane-cards");
-
-let aircraftData = [];
-
-// Fetch aircraft data from the JSON file
-fetch("aircraft-data.json")
-  .then(response => response.json())
-  .then(data => {
-    aircraftData = data;
-    displayAircraft(data);
-  })
-  .catch(error => {
-    console.error("Failed to load aircraft data:", error);
-    airplaneCardsContainer.innerHTML = "<p>Error loading aircraft data.</p>";
-  });
-
-// Display aircraft cards
-function displayAircraft(data) {
-  airplaneCardsContainer.innerHTML = "";
-  if (data.length === 0) {
-    airplaneCardsContainer.innerHTML = "<p>No aircraft found.</p>";
-    return;
-  }
-
-  data.forEach(aircraft => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <img src="${aircraft.image}" alt="${aircraft.name}" class="card-image">
-      <div class="card-body">
-        <h3>${aircraft.name}</h3>
-        <p><strong>Manufacturer:</strong> ${aircraft.manufacturer}</p>
-        <p><strong>Role:</strong> ${aircraft.role}</p>
-        <p><strong>First Flight:</strong> ${aircraft.first_flight}</p>
-      </div>
-    `;
-    airplaneCardsContainer.appendChild(card);
-  });
-}
-
-// Handle search & filter
-function applyFilters() {
-  const searchQuery = searchInput.value.trim().toLowerCase();
-  const manufacturerQuery = manufacturerFilter.value.trim().toLowerCase();
-  const roleQuery = roleFilter.value.trim().toLowerCase();
-
-  const filtered = aircraftData.filter(aircraft => {
-    const nameMatch = aircraft.name.toLowerCase().includes(searchQuery);
-    const manufacturerMatch = !manufacturerQuery || aircraft.manufacturer.toLowerCase() === manufacturerQuery;
-    const roleMatch = !roleQuery || aircraft.role.toLowerCase() === roleQuery;
-    return nameMatch && manufacturerMatch && roleMatch;
-  });
-
-  displayAircraft(filtered);
-  suggestionsContainer.innerHTML = "";
-}
-
-// Show suggestions while typing
-function showSuggestions() {
-  const input = searchInput.value.trim().toLowerCase();
-  suggestionsContainer.innerHTML = "";
-
-  if (input.length < 2) return;
-
-  const matches = aircraftData
-    .filter(aircraft => aircraft.name.toLowerCase().includes(input))
-    .slice(0, 5);
-
-  matches.forEach(match => {
-    const div = document.createElement("div");
-    div.className = "suggestion";
-    div.textContent = match.name;
-    div.addEventListener("click", () => {
-      searchInput.value = match.name;
-      applyFilters();
-      suggestionsContainer.innerHTML = "";
-    });
-    suggestionsContainer.appendChild(div);
-  });
-}
-
-// Event Listeners
-searchButton.addEventListener("click", applyFilters);
-searchInput.addEventListener("input", showSuggestions);
-manufacturerFilter.addEventListener("change", applyFilters);
-roleFilter.addEventListener("change", applyFilters);
