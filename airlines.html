@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>ATT - Air Traffic Tracker</title>
+    <meta name="description" content="Air Traffic Tracker Website, Track any flight anywhere in anytime">
+    <meta name="author" content="Zero&Zeskar">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div id="logo">
+            <img src="logo.png" alt="ATT Logo">
+            <h1>Air Traffic Tracker</h1>
+        </div>
+        <nav>
+            <ul class="listItems">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
+                <li><a href="#"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="airline-container">
+            <div class="airline-flex">
+                <div class="airline-header">
+                    <h1>Airlines</h1>
+                </div>
+
+                <!-- Airline 1 -->
+
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/southwest.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Southwestern Airlines</h1>
+                        <p>Southwestern Airlines is a major American airline headquartered in Dallas, Texas. It is known for its low-cost fares and no-frills service.</p>
+                    </div>
+                </div>
+
+                <!-- Airline 2 -->
+
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/airbritain.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Air Britain</h1>
+                        <p>Air-Britain maintains a system of aviation specialists who cover many aspects of both aviation history and of recording modern day aviation events.</p>
+                    </div>
+                </div>
+
+                <!-- Airline 3 -->
+
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/lufthansa.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Lufthansa Airline</h1>
+                        <p>Lufthansa Group, is a German aviation group. Its major and founding subsidiary airline Lufthansa German Airlines</p>
+                    </div>
+                </div>
+
+                <!-- Airline 4 -->
+
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/airfrance.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Airfrance</h1>
+                        <p>AIRFRANCE, is the flag carrier of France, and is headquartered in Tremblay-en-France.</p>
+                    </div>
+                </div>
+                
+                <!-- Airline 5 -->
+
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Qatar_Airways_Logo.png2.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Qatar-Airways</h1>
+                        <p>Qatar-Airways, Qatar Airways Company Q.C.S.C., operating as Qatar Airways, is the flag carrier of Qatar.</p>
+                    </div>
+                </div>
+
+                <!-- Airline 6 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Singapore.webp" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Singapore</h1>
+                        <p>Singapore Airlines (SIA) is the flag carrier of Singapore, operating from its hub at Changi.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 7 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Emirates Airlines Logo - Download Free PNG.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Emirates</h1>
+                        <p>Emirates is a major airline offering various services including flights.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 8 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Japan.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Japan</h1>
+                        <p>Japan Airlines (JAL) is the flag carrier of Japan.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 9 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Turkish.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Turkish</h1>
+                        <p>Turkish Airlines is a Star Alliance member founded in 1933, known for flying to more countries than any other airline.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 10 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Korean.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Korean</h1>
+                        <p>Korean Air is the flag carrier of South Korea and one of the world's top 20 airlines. It is the largest airline in South Korea by fleet size.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 11 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Etihad.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Etihad</h1>
+                        <p>Etihad Airways offers flights from its hub at Zayed International Airport, with options for economy, business, and first class.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 12 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/SAUDIA.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>SAUDIA</h1>
+                        <p>Saudia Airlines offers new entertainment experiences, with new destinations launching in June 2025.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 13 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/delta.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Delta</h1>
+                        <p>Delta Air Lines, headquartered in Atlanta, Georgia, is a major U.S. airline with nine hubs. It was recently recognized as one of the Fortune 100 Best Companies.</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 14 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Oman.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Oman</h1>
+                        <p>Oman Air offers online check-in, available 48 hours before departure, to save time at the airport. They also provide services like a Prime Class meet & greet departure service</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 15 -->
+                <div class="airline-card">
+                <div class="airline-logo">
+                    <img src="img/China.png" alt="Logo" class="logo-img">
+                </div>
+                <div class="airline-info">
+                    <h1>China</h1>
+                    <p>China Southern Airlines, headquartered in Guangzhou, Guangdong, is a major airline in China. It offers various services including extra baggage allowance</p>
+                </div>
+            </div>
+                
+
+                <!-- Airline 16 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Asiana.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Asiana</h1>
+                        <p>Asiana Airlines is a South Korean airline based in Seoul. It operates a network of international and domestic passenger routes</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 17 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/united-airlines-7-logo-png-transparent.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>United</h1>
+                        <p>United Airlines is a major US airline based in Chicago, Illinois, offering a broad network of domestic and international flights</p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 18 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/airnewzealand.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Air New Zealand</h1>
+                        <p>Air New Zealand offers flights to New Zealand, Australia, and Pacific Islands, with direct flights from the USA (Los Angeles, San Francisco, Houston, and Honolulu) and connections from Europe. </p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 19 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Finnair.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Finnair</h1>
+                        <p>Finnair is the flag carrier of Finland, headquartered at Helsinki Airport, which also serves as its hub. It operates flights between Europe, Asia, and North America. </p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 20 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/KLM.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>kLM Royal Dutch Airlines</h1>
+                        <p>KLM Royal Dutch Airlines, the flag carrier of the Netherlands, has its headquarters in Amstelveen. </p>
+                    </div>
+                </div>
+
+                <!-- Airline 21 -->
+                <div class="airline-card">
+                    <div class="airline-logo">
+                        <img src="img/Thai.png" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="airline-info">
+                        <h1>Thai</h1>
+                        <p>Thai Airways International is the flag carrier airline of Thailand, established in 1961 as a joint venture. </p>
+                    </div>
+                </div>
+                
+
+                <!-- Airline 22 -->
+                
+                
+
+                <!-- Airline 23 -->
+                 
+                
+
+                <!-- Airline 24 -->
+                 
+                
+
+                <!-- Airline 25 -->
+                 
+                
+
+                <!-- Airline 26 -->
+                 
+                
+
+                <!-- Airline 27 -->
+                 
+                
+
+                <!-- Airline 28 -->
+                 
+                
+
+                <!-- Airline 29 -->
+                 
+                
+
+                <!-- Airline 30 -->
+                 
+                
+
+                <!-- Airline 31 -->
+                 
+                
+
+                <!-- Airline 32 -->
+                 
+                
+
+                <!-- Airline 33 -->
+                 
+                
+
+                <!-- Airline 34 -->
+                 
+                
+
+                <!-- Airline 35 -->
+
+                
+
+                <!-- Airline 35 -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>About ATT</h3>
+            <p>Track any flight anywhere in the world in real-time with our comprehensive air traffic monitoring system.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
+                <li><a href="#">Airplanes</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> contact@attracker.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Air Traffic Tracker. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
