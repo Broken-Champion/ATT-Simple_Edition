@@ -1,7 +1,7 @@
 let aircraftMarkers = new Map();
 let selectedPlaneCallsign = null;
 let routeLayerGroup = L.layerGroup();
-const MAX_PLANES = 900;
+const MAX_PLANES = 1200;
 let mapLayer = null;
 const flightSearchInput = document.getElementById('flightSearch');
 const searchButton = document.getElementById('searchButton');
