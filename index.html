@@ -7,34 +7,38 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>ATT - Air Traffic Tracker</title>
+  <link rel="icon" type="image/x-icon" href="Public/imgs/comp/favicon.ico">
   <meta name="description" content="Air Traffic Tracker Website, Track any flight anywhere in anytime" />
   <meta name="author" content="Zero&Zeskar" />
   <meta name="theme-color" content="#1a1a2e" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Public/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script defer src="main.js"></script>
-  <script defer src="akio.js"></script>
+  <script defer src="Public/main.js"></script>
+  
 </head>
 <body>
-  <header class="header">
+  <header class="header glassy">
     <div id="logo">
-      <img src="../logo.png" alt="ATT Logo" />
-      <h1>Air Traffic Tracker</h1>
+      <a href="index.html" id="logo" class="logo-link">
+        <img src="Public/imgs/comp/logo.png" alt="ATT Logo" />
+        <h1>Air Traffic Tracker</h1>
+      </a>
     </div>
-    <nav>
+    <nav class="desktop-nav">
       <ul class="listItems">
         <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
         <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
         <li><a href="Airplanes.html"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
         <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
       </ul>
-      <button class="mobile-menu-btn" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
     </nav>
+    <button class="mobile-menu-btn" aria-label="Toggle Menu">
+      <i class="fas fa-bars"></i>
+    </button>
   </header>
+  
 
   <main id="content">
     <div id="search-container">
@@ -70,25 +74,25 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>About ATT</h3>
-        <p>Track any flight anywhere in the world in real-time with our comprehensive air traffic monitoring system.</p>
+  <footer class="footer-glassy">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <img src="/Public/imgs/comp/logo.png" alt="ATT Logo" class="footer-logo" />
+        <p class="footer-text">Track flights live, anywhere around the world with precision and elegance.</p>
       </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
           <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
-          <li><a href="Airplanes.html">Airplanes</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="Airplanes.html"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
         </ul>
       </div>
-      <div class="footer-section">
-        <h3>Contact</h3>
+      <div class="footer-column">
+        <h4>Contact</h4>
         <p><i class="fas fa-envelope"></i> contact@attracker.com</p>
-        <div class="social-icons">
+        <div class="footer-socials">
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -99,5 +103,6 @@
       <p>&copy; 2025 Air Traffic Tracker. All rights reserved.</p>
     </div>
   </footer>
+  
 </body>
 </html>

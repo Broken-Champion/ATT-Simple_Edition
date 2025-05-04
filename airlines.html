@@ -7,35 +7,36 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>ATT - Air Traffic Tracker</title>
+    <link rel="icon" type="image/x-icon" href="Public/imgs/comp/favicon.ico">
     <meta name="description" content="Air Traffic Tracker Website, Track any flight anywhere in anytime">
     <meta name="author" content="Zero&Zeskar">
     <meta name="theme-color" content="#1a1a2e">
-    <link rel="stylesheet" href="styleAirlines.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Public/css/airlines.css">
+    <link rel="stylesheet" href="Public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script defer src="main.js"></script>
-    <script defer src="akio.js"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header glassy">
         <div id="logo">
-            <img src="logo.png" alt="ATT Logo">
+          <a href="index.html" id="logo" class="logo-link">
+            <img src="../Public/imgs/comp/logo.png" alt="ATT Logo" />
             <h1>Air Traffic Tracker</h1>
+          </a>
         </div>
-        <nav>
-            <ul class="listItems">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
-                <li><a href="Airplanes.html"><i class="fas fa-plane-departure"></i> Airplanes</a></li>
-                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
-            </ul>
-            <button class="mobile-menu-btn" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
+        <nav class="desktop-nav">
+          <ul class="listItems">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
+            <li><a href="airplanes.html"><i class="fas fa-plane-departure"></i> airplanes</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+          </ul>
         </nav>
-    </header>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </header>
     <div class="main-content">
         <div class="airline-container">
             <div class="airline-flex">
@@ -47,7 +48,7 @@
 
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/southwest.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/southwest.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Southwestern Airlines</h1>
@@ -59,7 +60,7 @@
 
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/airbritain.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/airbritain.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Air Britain</h1>
@@ -71,7 +72,7 @@
 
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/lufthansa.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/lufthansa.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Lufthansa Airline</h1>
@@ -83,7 +84,7 @@
 
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/airfrance.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/airfrance.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Airfrance</h1>
@@ -95,7 +96,7 @@
 
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Qatar_Airways_Logo.png2.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Qatar_Airways_Logo.png2.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Qatar-Airways</h1>
@@ -106,7 +107,7 @@
                 <!-- Airline 6 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Singapore.webp" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Singapore.webp" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Singapore</h1>
@@ -118,7 +119,7 @@
                 <!-- Airline 7 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Emirates Airlines Logo - Download Free PNG.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Emirates Airlines Logo - Download Free PNG.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Emirates</h1>
@@ -130,7 +131,7 @@
                 <!-- Airline 8 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Japan.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Japan.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Japan</h1>
@@ -142,7 +143,7 @@
                 <!-- Airline 9 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Turkish.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Turkish.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Turkish</h1>
@@ -154,7 +155,7 @@
                 <!-- Airline 10 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Korean.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Korean.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Korean</h1>
@@ -166,7 +167,7 @@
                 <!-- Airline 11 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Etihad.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Etihad.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Etihad</h1>
@@ -178,7 +179,7 @@
                 <!-- Airline 12 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/SAUDIA.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/SAUDIA.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>SAUDIA</h1>
@@ -190,7 +191,7 @@
                 <!-- Airline 13 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/delta.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/delta.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Delta</h1>
@@ -202,7 +203,7 @@
                 <!-- Airline 14 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Oman.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Oman.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Oman</h1>
@@ -214,7 +215,7 @@
                 <!-- Airline 15 -->
                 <div class="airline-card">
                 <div class="airline-logo">
-                    <img src="img/China.png" alt="Logo" class="logo-img">
+                    <img src="Public/imgs/airlines/China.png" alt="Logo" class="logo-img">
                 </div>
                 <div class="airline-info">
                     <h1>China</h1>
@@ -226,7 +227,7 @@
                 <!-- Airline 16 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Asiana.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Asiana.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Asiana</h1>
@@ -238,7 +239,7 @@
                 <!-- Airline 17 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/united-airlines-7-logo-png-transparent.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/united-airlines-7-logo-png-transparent.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>United</h1>
@@ -250,7 +251,7 @@
                 <!-- Airline 18 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/airnewzealand.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/airnewzealand.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Air New Zealand</h1>
@@ -262,7 +263,7 @@
                 <!-- Airline 19 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Finnair.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Finnair.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Finnair</h1>
@@ -274,7 +275,7 @@
                 <!-- Airline 20 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/KLM.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/KLM.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>kLM Royal Dutch Airlines</h1>
@@ -285,7 +286,7 @@
                 <!-- Airline 21 -->
                 <div class="airline-card">
                     <div class="airline-logo">
-                        <img src="img/Thai.png" alt="Logo" class="logo-img">
+                        <img src="Public/imgs/airlines/Thai.png" alt="Logo" class="logo-img">
                     </div>
                     <div class="airline-info">
                         <h1>Thai</h1>
@@ -357,34 +358,34 @@
         </div>
     </div>
 </main>
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>About ATT</h3>
-            <p>Track any flight anywhere in the world in real-time with our comprehensive air traffic monitoring system.</p>
+<footer class="footer-glassy">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <img src="Public/imgs/comp/logo.png" alt="ATT Logo" class="footer-logo" />
+        <p class="footer-text">Track flights live, anywhere around the world with precision and elegance.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
+          <li><a href="airplanes.html"><i class="fas fa-plane-departure"></i> airplanes</a></li>
+          <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> contact@attracker.com</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="airlines.html"><i class="fas fa-plane"></i> Airlines</a></li>
-                <li><a href="#">Airplanes</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Contact</h3>
-            <p><i class="fas fa-envelope"></i> contact@attracker.com</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2025 Air Traffic Tracker. All rights reserved.</p>
+      <p>&copy; 2025 Air Traffic Tracker. All rights reserved.</p>
     </div>
-</footer>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,96 @@
+
+/* Airline Page Styling */
+.airline-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.airline-flex {
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.airline-header {
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.airline-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.airline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.airline-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.airline-logo {
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.airline-info {
+    flex-grow: 1;
+}
+
+.airline-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.airline-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.airline-card + .airline-card {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .container {
+        flex: 1;
+    }
+    
+    #map-container {
+        height: 400px;
+    }
+
+    /* Airline Page Styling */
+    .airline-grid {
+        grid-template-columns: 1fr;
+    }
+}

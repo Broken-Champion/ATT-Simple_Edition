@@ -198,4 +198,3 @@ setInterval(() => {
         liveatcWindow = null;
     }
 }, 1000);
-
