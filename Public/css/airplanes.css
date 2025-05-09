@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f0f1b;
+  color: #f0f0f0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(20, 20, 40, 0.85);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-link img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  color: #ff5c8d;
+}
+
+.desktop-nav .listItems {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.desktop-nav .listItems li a {
+  color: white;
+  text-decoration: none;
+}
+
+.desktop-nav .listItems li a:hover,
+.desktop-nav .listItems li a.active {
+  color: #00bcd4;
+}
+
+.airplane-search-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.airplane-search-inner {
+  width: 100%;
+  max-width: 600px;
+}
+
+#airplanesearch {
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  border: none;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.airplane-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  width: 280px;
+  overflow: hidden;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.airplane-card:hover {
+  transform: translateY(-6px);
+}
+
+.airplane-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.airplane-info {
+  padding: 1rem;
+}
+
+.airplane-info h3 {
+  color: #00bcd4;
+}
+
+.airplane-info p {
+  color: #ccc;
+}
+
+.modal-overlay {
+  position: absolute;
+  z-index: 999;
+  background: transparent;
+}
+
+.modal-content {
+  background: #1a1a2e;
+  color: white;
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+.modal-overlay {
+  position: absolute;
+  background: transparent;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1a1a2e;
+  color: white;
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.5);
+  position: absolute;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  color: #ccc;
+}

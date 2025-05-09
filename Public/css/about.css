@@ -1,0 +1,172 @@
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #16213e;
+  --accent-color: #0f3460 !important;
+  --highlight-color: #00cfff;
+  --text-color: #ffffff;
+  --text-secondary: #cfd8dc;
+  --background-color: #0f0f1a;
+  --card-bg: #15232e;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ========= HEADINGS ========== */
+h2.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--highlight-color);
+  margin-bottom: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* ========= OUR MISSION SECTION ========== */
+.our-mission {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.05);
+}
+
+.our-mission p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ========= FEATURE SECTION ========== */
+.features {
+  font-size: 2.7rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 255, 255, 0.05);
+  transition: transform 0.2s ease;
+  text-align: left;
+}
+
+.cards:hover {
+  transform: translateY(-6px);
+}
+
+.cards i {
+  font-size: 1.6rem;
+  color: var(--highlight-color);
+  margin-bottom: 0.8rem;
+}
+
+.cards h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cards p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ========= USER COMMENTS ========== */
+.user-comments {
+  background-color: var(--background-color);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.user-comments h2 {
+  font-size: 2rem;
+  color: var(--highlight-color);
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.comments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comment-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 255, 255, 0.05);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: transform 0.2s ease;
+}
+
+.comment-card:hover {
+  transform: translateY(-6px);
+}
+
+.comment-card span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    font-size: 2rem;
+  }
+
+  .our-mission p {
+    font-size: 1rem;
+  }
+}

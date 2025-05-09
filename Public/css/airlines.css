@@ -1,0 +1,160 @@
+/* Scoped Airlines Page Styles */
+.airlines-page {
+  font-family: 'Montserrat', sans-serif;
+  /*background: linear-gradient(135deg, #0a1229 0%, #1a2a50 100%);*/
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.airlines-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.airlines-page h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.airlines-page h1:after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #0050b1);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Airline Row Layout */
+.airlines-page .airline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+/* Airline Card Styling */
+.airlines-page .airline-card {
+  width: 45%;
+  background: rgba(26, 36, 64, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.airlines-page .airline-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.airlines-page .airline-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.airlines-page .airline-logo img {
+  height: 60px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
+}
+
+.airlines-page .airline-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #3498db, #0050b1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.airlines-page .airline-info {
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  font-weight: 300;
+}
+
+/* Plane Container & Animation */
+.airlines-page .plane-container {
+  width: 45%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.airlines-page .plane-img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.airlines-page .animate-plane {
+  animation: float 6s ease-in-out infinite;
+  transition: all 0.5s ease;
+}
+
+/* Arrow Styling */
+.airlines-page .arrow {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 80px;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .airlines-page .airline-row {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .airlines-page .airline-card,
+  .airlines-page .plane-container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .airlines-page .arrow {
+    display: none;
+  }
+
+  .airlines-page h1 {
+    font-size: 32px;
+  }
+
+  .airlines-page .airline-name {
+    font-size: 24px;
+  }
+}
